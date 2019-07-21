@@ -9,44 +9,62 @@ import Items from './components/Items'
 import NavBar from './components/NavBar'
 
 import {StateProvider} from './state/state'
+import { arrowFunctionExpression } from '@babel/types';
+
+
 
  function routing () {
+
   const initialState = {
     theme: { primary: 'green' },
-    "users2": [
-      {
-        "id": 1,
-        "first_name": "Sebastian",
-        "last_name": "Eschweiler",
-        "email": "sebastian@codingthesmartway.com"
-      },
-      {
-        "id": 2,
-        "first_name": "Steve",
-        "last_name": "Palmer",
-        "email": ""
-      },
-      {
-        "id": 3,
-        "first_name": "Ann",
-        "last_name": "Smith",
-        "email": "ann@codingthesmartway.com"
-      }
-    ]
-  };
-  
-  const reducer = (state, action) => {
-    switch (action.type) {
-      case 'changeTheme':
-        return {
-          ...state,
-          theme: action.newTheme
-        };
-        
-      default:
-        return state;
+    usersState: {
+      isLoadingUsers: false,
+      isError: false,
+      data: [],
     }
   };
+
+  const reducer = (state, action) => {
+
+     switch (action.type) {
+       case 'changeTheme':
+         console.log("in reducer changing theme:",state)
+         return {
+           ...state,
+           theme: action.newTheme
+         };
+        case 'FETCH_USERS_INIT':
+       return {
+         ...state,usersState: {
+            ...state.userState,
+          isLoadingUsers: true,
+          isError: false
+         }
+       };
+      case 'FETCH_USERS_SUCCESS':
+       return {
+        ...state,usersState: {
+           ...state.userState,
+         isLoadingUsers: false,
+         isError: false,
+         data: action.payload
+        }
+      };
+      case 'FETCH_USERS_FAILURE':
+       return {
+        ...state,usersState: {
+           ...state.userState,
+         isLoadingUsers: false,
+         isError: true
+        }
+      }
+         //might need to throw for default of users reducers
+       default:
+         return state;
+     }
+   };
+  
+ 
 
   return (
   <StateProvider initialState={initialState} reducer={reducer}>
