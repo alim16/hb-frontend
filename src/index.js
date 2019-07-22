@@ -9,7 +9,9 @@ import Items from './components/Items'
 import NavBar from './components/NavBar'
 
 import {StateProvider} from './state/state'
-import { arrowFunctionExpression } from '@babel/types';
+import {usersReducer} from './state/reducers/usersReducer'
+import {themeReducer} from './state/reducers/themeReducer'
+import {itemsReducer} from './state/reducers/itemsReducer'
 
 
 
@@ -21,53 +23,22 @@ import { arrowFunctionExpression } from '@babel/types';
       isLoadingUsers: false,
       isError: false,
       data: [],
+    },
+    itemsState: {
+      isLoadingUsers: false,
+      isError: false,
+      data: [],
     }
   };
-
-  const reducer = (state, action) => {
-
-     switch (action.type) {
-       case 'changeTheme':
-         console.log("in reducer changing theme:",state)
-         return {
-           ...state,
-           theme: action.newTheme
-         };
-        case 'FETCH_USERS_INIT':
-       return {
-         ...state,usersState: {
-            ...state.userState,
-          isLoadingUsers: true,
-          isError: false
-         }
-       };
-      case 'FETCH_USERS_SUCCESS':
-       return {
-        ...state,usersState: {
-           ...state.userState,
-         isLoadingUsers: false,
-         isError: false,
-         data: action.payload
-        }
-      };
-      case 'FETCH_USERS_FAILURE':
-       return {
-        ...state,usersState: {
-           ...state.userState,
-         isLoadingUsers: false,
-         isError: true
-        }
-      }
-         //might need to throw for default of users reducers
-       default:
-         return state;
-     }
-   };
   
- 
+  const combinedReducer = ({ usersState, theme, itemsState }, action) => ({
+    usersState: usersReducer(usersState, action),
+    theme: themeReducer(theme, action),
+    itemsState: itemsReducer(itemsState, action)
+  });
 
   return (
-  <StateProvider initialState={initialState} reducer={reducer}>
+  <StateProvider initialState={initialState} reducer={combinedReducer}>
       <Router>
           <NavBar/>
         <div>

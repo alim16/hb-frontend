@@ -3,7 +3,7 @@
 //https://www.robinwieruch.de/react-hooks-fetch-data/
 //https://medium.com/simply/state-management-with-react-hooks-and-context-api-at-10-lines-of-code-baf6be8302c
 
-import React, { useReducer, useEffect, useState } from 'react';
+import React, {  useEffect} from 'react';
 
 //import './users.css';
 import  {Table, Button}  from "react-bootstrap";
@@ -47,11 +47,10 @@ function Users () {
               <th>Email</th>
             </tr>
           </thead>
-          {usersState.isLoadingUsers ? (<p>isLoading...</p>)
+          {console.log("rendering with state", usersState)}
+          {usersState.isLoadingUsers ? (<p>isLoading.../</p>)
           :<tbody>
-            
-   
-            {usersState.data.map(u =>
+            {usersState.data && usersState.data.map(u =>
                     <tr key={u.id}>
                         <td>{u.first_name}</td>
                         <td>{u.last_name}</td>
@@ -62,7 +61,6 @@ function Users () {
           }
         </Table>
    
-    {console.log("rendering with state:",usersState)}
       </div>
     );
 }
