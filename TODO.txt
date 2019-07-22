@@ -2,4 +2,5 @@
 2. remove css files and use styled components
 3. change app from js to typescript
 4. update UI of users and items to something better than a table
-5. add item buying feature
+5. find out how to use themes in styled component with theme value in state
+6. add item buying feature

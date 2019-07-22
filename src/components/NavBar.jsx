@@ -13,7 +13,8 @@ export default function NavBar () {
         someStyle}>
                  <Nav style={{fontSize: '25px'}}>
                     <Nav.Item ><Link to="/users">Users</Link></Nav.Item>
-                    <Nav.Item href="#features"><Link to="/items">Items</Link></Nav.Item>             
+                    <Nav.Item href="#features"><Link to="/items">Items</Link></Nav.Item>
+                    <Nav.Item ><Link to="/login">Login</Link></Nav.Item>             
                 </Nav>  
             </Navbar>
         </div>

@@ -7,13 +7,12 @@ import {Route, BrowserRouter as Router} from 'react-router-dom'
 import Users from './components/Users'
 import Items from './components/Items'
 import NavBar from './components/NavBar'
+import LoginPage from './components/login';
 
 import {StateProvider} from './state/state'
 import {usersReducer} from './state/reducers/usersReducer'
 import {themeReducer} from './state/reducers/themeReducer'
 import {itemsReducer} from './state/reducers/itemsReducer'
-
-
 
  function routing () {
 
@@ -45,6 +44,7 @@ import {itemsReducer} from './state/reducers/itemsReducer'
           <Route exact path="/" component={App} />
         <Route path="/users" component={Users} />
           <Route path="/items" component={Items} /> 
+          <Route path="/login" component={LoginPage} /> 
         </div>
       </Router>
   </StateProvider>
