@@ -1,0 +1,5 @@
+1. add login feature
+2. remove css files and use styled components
+3. change app from js to typescript
+4. update UI of users and items to something better than a table
+5. add item buying feature
