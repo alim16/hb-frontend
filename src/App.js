@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-//good article
+//good article *not used in codebase anymore*
 ///https://dzone.com/articles/loading-data-in-react-redux-thunk-redux-saga-suspe
 
 function App() {
