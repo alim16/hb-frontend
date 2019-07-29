@@ -7,12 +7,13 @@ import {Route, BrowserRouter as Router} from 'react-router-dom'
 import Users from './components/Users'
 import Items from './components/Items'
 import NavBar from './components/NavBar'
-import LoginPage from './components/login';
+import LoginPage from './components/LoginPage';
 
 import {StateProvider} from './state/state'
 import {usersReducer} from './state/reducers/usersReducer'
 import {themeReducer} from './state/reducers/themeReducer'
 import {itemsReducer} from './state/reducers/itemsReducer'
+import {loginReducer} from './state/reducers/loginReducer'
 
  function routing () {
 
@@ -24,16 +25,24 @@ import {itemsReducer} from './state/reducers/itemsReducer'
       data: [],
     },
     itemsState: {
-      isLoadingUsers: false,
+      isLoadingItems: false,
       isError: false,
       data: [],
+    },
+    loginState: {
+      email: '',
+      password: '',
+      submitted: false,
+      loading: false,
+      error: ''
     }
   };
   
-  const combinedReducer = ({ usersState, theme, itemsState }, action) => ({
+  const combinedReducer = ({ usersState, theme, itemsState, loginState }, action) => ({
     usersState: usersReducer(usersState, action),
     theme: themeReducer(theme, action),
-    itemsState: itemsReducer(itemsState, action)
+    itemsState: itemsReducer(itemsState, action),
+    loginState: loginReducer(loginState, action)
   });
 
   return (
