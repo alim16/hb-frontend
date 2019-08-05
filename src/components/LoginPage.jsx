@@ -11,15 +11,14 @@ export default function LoginPage () {
     const [{loginState}, dispatch] = useStateValue();
 
     const handleChange = (e) => {
-        const { name, value } = e.target;
+        //updates the state value for that field
         dispatch({type: 'UPDATE_LOGIN_FIELD', payload: e.target})
-       
-        //this.setState({ [name]: value });
     }
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         console.log('pressed submit, with values',loginState)
+        //createLogin session should take a credentials argument
         await createLoginSession() //dispatch some state action before this
 
         //put state change logic and login submit request here
