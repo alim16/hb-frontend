@@ -10,12 +10,12 @@ import {createLoginSession, getPublic1} from "../axApi";
 export default function LoginPage () {
     const [{loginState}, dispatch] = useStateValue();
 
-    const handleChange = (e) => {
+    const handleChange = (e:any) => {
         //updates the state value for that field
         dispatch({type: 'UPDATE_LOGIN_FIELD', payload: e.target})
     }
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e:any) => {
         e.preventDefault();
         console.log('pressed submit, with values',loginState)
         //createLogin session should take a credentials argument

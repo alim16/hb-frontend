@@ -9,7 +9,7 @@ import Items from './components/Items'
 import NavBar from './components/NavBar'
 import LoginPage from './components/LoginPage';
 
-import {StateProvider} from './state/state'
+import {StateProvider, IState} from './state/state'
 import {usersReducer} from './state/reducers/usersReducer'
 import {themeReducer} from './state/reducers/themeReducer'
 import {itemsReducer} from './state/reducers/itemsReducer'
@@ -32,13 +32,14 @@ import {loginReducer} from './state/reducers/loginReducer'
     loginState: {
       email: '',
       password: '',
+      isAuth:false,
       submitted: false,
       loading: false,
       error: ''
     }
   };
   
-  const combinedReducer = ({ usersState, theme, itemsState, loginState }, action) => ({
+  const combinedReducer = ({ usersState, theme, itemsState, loginState }: IState, action:object) => ({
     usersState: usersReducer(usersState, action),
     theme: themeReducer(theme, action),
     itemsState: itemsReducer(itemsState, action),

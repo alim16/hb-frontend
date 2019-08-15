@@ -39,7 +39,8 @@ function Users () {
     return (
       <div className="users">
         <h1> Users list</h1>
-        <Table striped bordered condensed hover>
+        {/*striped bordered condensed hover*/}
+        <Table  > 
           <thead>
             <tr>
               <th>#</th>
@@ -47,7 +48,6 @@ function Users () {
               <th>Email</th>
             </tr>
           </thead>
-          {console.log("rendering with state", usersState)}
           {usersState.isLoadingUsers ? (<p>isLoading.../</p>)
           :<tbody>
             {usersState.data && usersState.data.map(u =>

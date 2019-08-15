@@ -1,4 +1,4 @@
-export const loginReducer = (loginState, action) => {
+export const loginReducer = (loginState:any, action:any) => {
 
     switch (action.type) {
     
