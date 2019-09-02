@@ -1,6 +1,6 @@
-1. add login feature
-2. remove css files and use styled components
-3. change app from js to typescript
+1. add login feature //nearly done
+2. add account page for user (requires login, shows amount owed and purchase history)
+3. change app from js to typescript // done
 4. update UI of users and items to something better than a table
-5. find out how to use themes in styled component with theme value in state
-6. add item buying feature
+5. add themes in styled-components with theme value in the state
+6. add item buying feature (just adds value of item to current users "amount owed")

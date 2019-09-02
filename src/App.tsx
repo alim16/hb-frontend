@@ -6,9 +6,12 @@ import styled from 'styled-components';
 ///https://dzone.com/articles/loading-data-in-react-redux-thunk-redux-saga-suspe
 
 function App() {
+
+  //add css for component here
   const AppWrapper = styled.div`
-  color: Blue
+  color: Blue //
   `
+
   return (
     <AppWrapper>
     <div className="App">

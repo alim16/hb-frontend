@@ -24,14 +24,14 @@ export default function LoginPage () {
 
         //put state change logic and login submit request here
     }
-
+    //add css for component here
     const LogginWrapper = styled.div`
-    margin: auto;
-    width: 50%;
-    width: 1000px;
-    .alert-info {
-        background-color: pink;
-    }
+        margin: auto;
+        width: 50%;
+        width: 1000px;
+        .alert-info {
+            background-color: pink;
+        }
   `
 
     return (
