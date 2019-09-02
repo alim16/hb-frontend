@@ -5,12 +5,10 @@ import './navbar.css'
 
 export default function NavBar () {
 
-    const someStyle = {}//{color:'green'}
     return (
         <div>
-            <Navbar.Brand href="/" style={someStyle}><h1>App Header</h1></Navbar.Brand>
-            <Navbar expand="lg" variant="dark" bg="dark" style={ 
-        someStyle}>
+            <Navbar.Brand href="/" ><h1>App Header</h1></Navbar.Brand>
+            <Navbar expand="lg" variant="dark" bg="dark">
                  <Nav style={{fontSize: '25px'}}>
                     <Nav.Item ><Link to="/users">Users</Link></Nav.Item>
                     <Nav.Item ><Link to="/items">Items</Link></Nav.Item>

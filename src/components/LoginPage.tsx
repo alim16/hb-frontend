@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import { useStateValue } from '../state/state';
+import styled from 'styled-components';
 
 import {createLoginSession, getPublic1} from "../axApi";
 
@@ -24,8 +25,17 @@ export default function LoginPage () {
         //put state change logic and login submit request here
     }
 
+    const LogginWrapper = styled.div`
+    margin: auto;
+    width: 50%;
+    width: 1000px;
+    .alert-info {
+        background-color: pink;
+    }
+  `
+
     return (
-        <div> 
+        <LogginWrapper>
             <h1>Login page </h1>
             <div >
                 <div className="alert alert-info">
@@ -35,14 +45,16 @@ export default function LoginPage () {
                 <form name="form" onSubmit={handleSubmit}>
                     <div >
                         <label htmlFor="email">Username</label>
-                        <input type="text" className="form-control" name="email" value={loginState.email} onChange={handleChange} />
+                        <input type="text" className="form-control" name="email"
+                        value={loginState.email} onChange={handleChange} />
                         {loginState.submitted && !loginState.email &&
                             <div className="help-block">Username is required</div>
                         }
                     </div>
                     <div >
                         <label htmlFor="password">Password</label>
-                        <input type="password" className="form-control" name="password" value={loginState.password} onChange={handleChange} />
+                        <input type="password" className="form-control" name="password"
+                        value={loginState.password} onChange={handleChange} />
                         {loginState.submitted && !loginState.password &&
                             <div className="help-block">Password is required</div>
                         }
@@ -50,7 +62,21 @@ export default function LoginPage () {
                     <div className="form-group">
                         <button className="btn btn-primary" disabled={loginState.loading}>Login</button>
                         {loginState.loading &&
-                            <img src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+                            <img src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJ
+                            CQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdG
+                            ggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIO
+                            ggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAA
+                            ACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXX
+                            f7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJ
+                            DMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAI
+                            fkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGq
+                            RoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunI
+                            nK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAA
+                            Ah+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradyleso
+                            jEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi6
+                            3P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpE
+                            AACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMT
+                            CpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
                         }
                     </div>
                     {loginState.error &&
@@ -59,7 +85,7 @@ export default function LoginPage () {
                 </form>
             </div>
         
-        </div>
+        </LogginWrapper>
 
     )
   }
