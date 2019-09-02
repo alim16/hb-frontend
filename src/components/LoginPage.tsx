@@ -38,6 +38,7 @@ export default function LoginPage () {
         <LogginWrapper>
             <h1>Login page </h1>
             <div >
+                <h1>#####This is not yet working##### </h1>
                 <div className="alert alert-info">
                     Username: test<br />
                     alert to be used for validations later

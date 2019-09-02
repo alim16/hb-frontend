@@ -22,18 +22,178 @@
   "items": [
     {
       "id": 1,
-      "item_name": "some item",
-      "item_description": "some item description 1"
+      "item_name": "Bounty",
+      "category": "chocolate",
+      "price": 0.4
     },
     {
       "id": 2,
-      "item_name": "some item 2",
-      "item_description": "some item description 2"
+      "item_name": "Dairy Milk",
+      "category": "chocolate",
+      "price": 0.4
     },
     {
       "id": 3,
-      "item_name": "some item",
-      "item_description": "some item description 3"
+      "item_name": "Galaxy Ripple",
+      "category": "chocolate",
+      "price": 0.4
+    },
+    {
+      "id": 4,
+      "item_name": "Kinder Bueno",
+      "category": "chocolate",
+      "price": 0.4
+    },
+    {
+      "id": 5,
+      "item_name": "Kitkat",
+      "category": "chocolate",
+      "price": 0.4
+    },
+    {
+      "id": 6,
+      "item_name": "Maltesers",
+      "category": "chocolate",
+      "price": 0.5
+    },
+    {
+      "id": 7,
+      "item_name": "Mars",
+      "category": "chocolate",
+      "price": 0.4
+    },
+    {
+      "id": 8,
+      "item_name": "Mini Dairy Milk",
+      "category": "chocolate",
+      "price": 0.2
+    },
+    {
+      "id": 9,
+      "item_name": "Mini Kinder",
+      "category": "chocolate",
+      "price": 0.2
+    },
+    {
+      "id": 10,
+      "item_name": "Minstrels",
+      "category": "chocolate",
+      "price": 0.6
+    },
+    {
+      "id": 11,
+      "item_name": "Fruitella",
+      "category": "sweets",
+      "price": 0.7
+    },
+    {
+      "id": 12,
+      "item_name": "Crisps",
+      "category": "crisps",
+      "price": 0.2
+    },
+    {
+      "id": 13,
+      "item_name": "Graze nut mix",
+      "category": "chocolate",
+      "price": 3
+    },
+    {
+      "id": 14,
+      "item_name": "Graze protein bites",
+      "category": "chocolate",
+      "price": 0.6
+    },
+    {
+      "id": 15,
+      "item_name": "Large popcorn",
+      "category": "chocolate",
+      "price": 1.6
+    },
+    {
+      "id": 16,
+      "item_name": "Naked bar",
+      "category": "chocolate",
+      "price": 0.6
+    },
+    {
+      "id": 17,
+      "item_name": "Nature valley bar",
+      "category": "chocolate",
+      "price": 0.5
+    },
+    {
+      "id": 18,
+      "item_name": "Small popcorn",
+      "category": "crisps",
+      "price": 0.8
+    },
+    {
+      "id": 19,
+      "item_name": "Chewing gum",
+      "category": "chocolate",
+      "price": 1
+    },
+    {
+      "id": 20,
+      "item_name": "Polo mints",
+      "category": "chocolate",
+      "price": 0.3
+    },
+    {
+      "id": 21,
+      "item_name": "Cawston Press",
+      "category": "drink",
+      "price": 0.9
+    },
+    {
+      "id": 22,
+      "item_name": "Coke",
+      "category": "drink",
+      "price": 0.5
+    },
+    {
+      "id": 23,
+      "item_name": "Coke zero",
+      "category": "drink",
+      "price": 0.5
+    },
+    {
+      "id": 24,
+      "item_name": "Diet coke",
+      "category": "drink",
+      "price": 0.5
+    },
+    {
+      "id": 25,
+      "item_name": "Fanta",
+      "category": "drink",
+      "price": 0.5
+    },
+    {
+      "id": 26,
+      "item_name": "Lucozade",
+      "category": "drink",
+      "price": 0.6
+    },
+    {
+      "id": 27,
+      "item_name": "San pellagrino",
+      "category": "drink",
+      "price": 0.6
+    },
+    {
+      "id": 28,
+      "item_name": "Sparkling water",
+      "category": "drink",
+      "price": 0.3
+    },
+    {
+      "id": 29,
+      "item_name": "Sprite",
+      "category": "drink",
+      "price": 0.5
     }
   ]
+  
 }
